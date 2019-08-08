@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Customer</title>
+</head>
+<body bgcolor="#79b593">
+<h1>Hello </h1>
+
+<script>
+function validate()
+{
+	var usern=document.getElementById("loginId").value;
+	var pass=document.getElementById("password").value;
+	//var errUsername=document.getElementById("errUsername");
+	//var errUsername=document.getElementById("errUsername");
+	//var errUsername=document.getElementById("sucessMessage");
+	var errpassword_valid=document.getElementById("password_valid");
+	if(usern.length==0 || pass.length==0)
+    {
+    	
+		alert("Please enter login id or password");
+		errpassword_valid.innerHTML="please set valid password";
+		return false;
+    }
+	else if(pass.length<6)
+	{
+		errpassword_valid.innerHTML="";
+		errpassword_valid.innerHTML="please set valid password";
+		return false;
+	}
+else
+    {
+	errpassword_valid.innerHTML="password is valid";
+    alert("Most welcome: "+usern);
+    }
+   
+}
+</script>
+
+<form action ="success.html" onsubmit="return validate()">
+<table cellspacing="10" cellpadding="10" align="center">
+<tr><td>Login Id </td><td> <input type ="text" id="loginId" name="loginId"></td></tr>
+<tr><td>Password</td><td> <input type ="password" id="password" name="password"></td>
+<td><span id="password_valid"></span> </td>
+</tr>
+
+
+<tr><td align="center"><input type="submit" value="login"></td>
+<td align="center"><input type="reset" value="clear"></td></tr>
+</table>
+</form>
+<!-- 
+ <input type="button" value="Go" onClick="validate()">
+ -->
+
+</body>
+</html>

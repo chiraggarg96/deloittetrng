@@ -1,0 +1,12 @@
+h1.players{
+	color:blue;
+}
+h1.coaches{
+	color:black;
+}
+body{background:yellow url('joker.jpg') no-repeat right top;}
+
+table{
+	bgcolor:"black";
+	padding=5px;
+}
